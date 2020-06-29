@@ -58,17 +58,17 @@
 >                count += 1
 >    return count 
 
--   技巧:一个数占4个字节,一个字节8个位,因此外侧for循环可简化为32,即取0-31
--   
+-   技巧:一个数占4个字节,一个字节8个位,因此外侧for循环可简化为32,即取0-31   
+-   第j个数右移i位,和1做与运算,只关注最后一位是0还是1
 >   def totalHammingDistance(self, nums: List[int]) -> int:
->      count = 0
->      for i in range(32):
->          count_0=0
->          count_1=0
->          for j in range(len(nums)):
->              if(nums[j] >> i) & 1:
->                  count_1+=1
->              else:
->                  count_0+=1
->          count=count + count_0 * count_1
->      return count
+>      count = 0                                            
+>      for i in range(32):                                                          
+>          count_0=0                                                        
+>          count_1=0                                                                    
+>          for j in range(len(nums)):                                                       
+>              if(nums[j] >> i) & 1:                                                                    
+>                  count_1+=1                                                           
+>              else:                                                                    
+>                  count_0+=1                                                                         
+>          count=count + count_0 * count_1                                                                          
+>      return count                                                                       
