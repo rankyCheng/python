@@ -33,21 +33,21 @@
 >      for i in som:                                                                              
 >        print(i)                                                                                      
 >    return                                                                                    
->    change('name','year','mon','address')                                 
+-    返回--change('name','year','mon','address')                                 
 
 -   当形参中有不定长参数 *other，调用函数时用 *dir会发现结果是只有字典中键名，没有值
->    dir={'name': 'miss', 'age': '18'}
->       def Deaf(school, banji, *other):
->          print('Xuexiao:', school, 'Banji:', banji, 'Student_info:', other)
->    Deaf('Tsinghua', 'Class 2', *dir)
->    Xuexiao: Tsinghua Banji: Class 2 Student_info: ('name', 'age')
+>    dir={'name': 'miss', 'age': '18'}                                                                    
+>       def Deaf(school, banji, *other):                                                                        
+>          print('Xuexiao:', school, 'Banji:', banji, 'Student_info:', other)                                                         
+>    Deaf('Tsinghua', 'Class 2', *dir)                                                                                    
+-    返回--Xuexiao: Tsinghua Banji: Class 2 Student_info: ('name', 'age')                                                            
 
 -   当形参有不定长参数 *other ，调用函数时用 dir 但其结果是 将字典 以元组的形式输出，既在字典外面加括号。
->   dir={'name': 'miss', 'age': '18'}
->   def Deaf(school, banji, *other):
->      print('Xuexiao:', school, 'Banji:', banji, 'Student_info:', other)
->   Deaf('Tsinghua', 'Class 2', dir)
->   Xuexiao: Tsinghua Banji: Class 2 Student_info: ({'name': 'miss', 'age': '18'},)
+>   dir={'name': 'miss', 'age': '18'}                                                         
+>   def Deaf(school, banji, *other):                                                                      
+>      print('Xuexiao:', school, 'Banji:', banji, 'Student_info:', other)                                                               
+>   Deaf('Tsinghua', 'Class 2', dir)                                                                                  
+-   返回--Xuexiao: Tsinghua Banji: Class 2 Student_info: ({'name': 'miss', 'age': '18'},)                                                                     
 
 ### 关键字参数(**kw):在调用函数时，传入实参时带参数名，用这样的方式传入的实参叫做关键字参数。
 -   和可变参数类似，也可以先组装出一个dict，然后，把该dict转换为关键字参数传进去
