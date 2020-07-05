@@ -37,11 +37,11 @@
 通过强制走索引的方式来查询，eg:
 >  select * from t force index(a) where c < 100 and c < 100000;
 或
-> show index from t;
-查询索引的基数和实际是否符合                                                                                                                    
-- 如果和实际很不符合的话，可以重新统计索引的基数:
-> analyze table t;
-最后重新统计分析。
+> show index from t;                                                                                                                      
+查询索引的基数和实际是否符合                                                                                                                                                
+- 如果和实际很不符合的话，可以重新统计索引的基数:                                                            
+> analyze table t;                                                                                    
+最后重新统计分析。                                                                 
 
 
 
